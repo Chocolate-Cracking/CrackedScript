@@ -4,7 +4,8 @@ getgenv().getNewLibs = function()
 		flags = { },
 		items = { }
 	}
-    
+    if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
+    if _G.Color2 == nil then _G.Color2 = Color3.fromRGB(0, 151, 156) end
     -- Services
 	local players = game:GetService("Players")
 	local uis = game:GetService("UserInputService")
@@ -28,12 +29,12 @@ getgenv().getNewLibs = function()
         backgroundcolor = Color3.fromRGB(20, 20, 20),
         tabstextcolor = Color3.fromRGB(240, 240, 240),
         bordercolor = Color3.fromRGB(60, 60, 60),
-        accentcolor = Color3.fromRGB(80, 245, 245),
-        accentcolor2 = Color3.fromRGB(1, 135, 145),
+        accentcolor = _G.Color,
+        accentcolor2 = _G.Color2,
         outlinecolor = Color3.fromRGB(60, 60, 60),
         outlinecolor2 = Color3.fromRGB(0, 0, 0),
         sectorcolor = Color3.fromRGB(30, 30, 30),
-        toptextcolor = Color3.fromRGB(80, 245, 245),
+        toptextcolor = _G.Color,
         topheight = 48,
         topcolor = Color3.fromRGB(30, 30, 30),
         topcolor2 = Color3.fromRGB(15, 15, 15),
